@@ -1,0 +1,62 @@
+<android.support.v7.widget.CardView
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:id="@+id/cv_item"
+    card_view:cardCornerRadius="5dp"
+    android:clickable="true"
+    android:foreground="?attr/selectableItemBackground">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical"
+       android:padding="10dp"
+       android:gravity="center">
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:gravity="center">
+         <ImageView
+             android:id="@+id/iv_funny_frag_icon"
+             android:layout_width="50dp"
+             android:layout_height="50dp"/>
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_marginLeft="10dp"
+             android:gravity="center"
+             android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_funny_frag_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:textSize="16sp"
+                android:textColor="@color/dark_grey"
+                android:text="可爱萌169"/>
+            <TextView
+                android:id="@+id/tv_funny_frag_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textSize="16sp"
+                android:textColor="@color/dark_grey"
+                android:text="2016-01-26 08:08:08"/>
+         </LinearLayout>
+      </LinearLayout>
+      <TextView
+          android:id="@+id/tv_funny_frag_text"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center_vertical"
+          android:textSize="18sp"
+          android:textColor="@color/black"
+          android:text="\n 昨晚和女友吵架，吵得很凶，没一会我打开陌陌发现附近的动态，是她发的，上面写着“为什么在我伤心难过的时候，总会想起你？我多么希望你能立刻出现在我面前，紧紧的把我拥在怀中，任凭我撕打泪流......”我当场就呆了，相处了三年的女人，竟然心里藏在一个人、我果断选择了离开、我这样做对吗？\n "/>
+   </LinearLayout>
+
+</android.support.v7.widget.CardView>

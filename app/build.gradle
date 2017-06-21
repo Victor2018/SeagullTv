@@ -1,0 +1,70 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion '25.0.0'
+
+    signingConfigs {
+        release {
+            storeFile file('../docs/victor_keystore.jks')
+            storePassword "android"
+            keyAlias "victor"
+            keyPassword "android"
+        }
+    }
+
+    defaultConfig {
+        applicationId "com.victor.seagull"
+        minSdkVersion 17
+        targetSdkVersion 24
+        versionCode 19
+        versionName "1.1.9"
+
+        ndk {
+            moduleName "ImageBlur"
+            ldLibs "m", "log", "jnigraphics"
+//            abiFilters "armeabi", "armeabi-v7a", "x86"
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        debug {
+            signingConfig signingConfigs.release
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:24.2.0'
+    compile 'com.android.support:recyclerview-v7:24.2.0'
+    compile 'com.android.support:cardview-v7:24.2.0'
+    compile 'com.android.support:design:24.2.0'
+    compile 'com.jakewharton:butterknife:7.0.1'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'jp.wasabeef:glide-transformations:1.3.1'
+    compile 'com.mikepenz:iconics-core:2.5.5@aar'
+    compile 'com.mikepenz:material-design-iconic-typeface:2.2.0.1@aar'
+    compile 'com.mikepenz:fontawesome-typeface:4.5.0.1@aar'
+    compile 'com.mikepenz:foundation-icons-typeface:3.0.0.1@aar'
+
+    compile 'com.mcxiaoke.volley:library:1.0.19'
+    compile 'com.squareup.okhttp3:okhttp:3.1.2'
+    compile 'com.google.code.gson:gson:2.6.1'
+    compile 'com.alibaba:fastjson:1.1.56.android'
+
+    compile('com.afollestad.material-dialogs:core:0.9.0.1@aar') {
+        transitive = true
+    }
+    compile('com.afollestad.material-dialogs:commons:0.9.0.1') {
+        transitive = true
+    }
+    compile files('libs/jsoup-1.9.2.jar')
+    compile 'com.github.Victor2018:AppUpdateLib:v1.7'
+    compile 'com.github.Victor2018:PermissionHelper:v1.0'
+}

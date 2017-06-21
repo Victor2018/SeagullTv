@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.victor.widget.InsetsCoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:background="@android:color/transparent">
+
+    <RelativeLayout
+        android:id="@+id/main_parent_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/bubbles_iv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/projects_bg"/>
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/srl_fresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_gank"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:paddingBottom="4dp"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:paddingTop="89dp"/>
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </RelativeLayout>
+    <include layout="@layout/toolbar"/>
+    <com.victor.widget.ColorFloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@mipmap/ic_up"
+        android:clickable="true"
+        android:background="?attr/colorPrimary"
+        android:transitionName="@string/transition_fab_icon"
+        app:layout_behavior="com.victor.widget.ScrollAwareFABBehavior"/>
+</com.victor.widget.InsetsCoordinatorLayout>

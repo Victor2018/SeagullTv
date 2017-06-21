@@ -1,0 +1,1 @@
+package com.victor.model.data;import java.io.Serializable;import java.util.List;/** * Created by victor on 2017/5/8. */public class ChannelUrl implements Serializable{    private String play_url;    public void setPlay_url(String play_url) {        this.play_url = play_url;    }    public String getPlay_url() {        return play_url;    }}

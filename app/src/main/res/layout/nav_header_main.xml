@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.victor.widget.ColorRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/headerView"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/nav_header_height"
+    android:background="?attr/colorPrimary"
+    android:padding="15dp"
+    android:orientation="vertical"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <ImageView
+        android:id="@+id/iv_avatar"
+        android:layout_width="160dp"
+        android:layout_height="80dp"
+        android:src="@mipmap/ic_avatar" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_avatar"
+        android:layout_marginLeft="10dp"
+        android:maxLines="1"
+        android:padding="10dp"
+        android:text="从你的全世界路过"
+        android:textColor="@android:color/white"
+        android:textSize="22sp" />
+
+</com.victor.widget.ColorRelativeLayout>

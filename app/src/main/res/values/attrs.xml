@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="colorPrimaryCenter" format="color|reference" />
+    <attr name="colorTextIcon" format="color|reference" />
+    <attr name="colorPrimaryText" format="color|reference" />
+    <attr name="colorSecondText" format="color|reference" />
+    <attr name="colorBackground" format="color|reference" />
+    <attr name="colorDivider" format="color|reference" />
+    <attr name="colorBackgroundAccent" format="color|reference" />
+    <attr name="colorHint" format="color|reference" />
+    <attr name="menuBackground" format="reference" />
+
+    <declare-styleable name="HeartBubbleView">
+        <attr name="heartColor" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="CircleProgressBar">
+        <attr name="progress_value" format="integer" />
+        <attr name="progress_color" format="color" />
+        <attr name="background_color" format="color" />
+        <attr name="progress_width" format="dimension" />
+        <attr name="background_width" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="CarrouselLayout">
+        <attr name="autoRotation" format="boolean"/>
+        <attr name="rotationTime" format="integer"/>
+        <attr name="r" format="dimension"/>
+        <attr name="rotateDirection">
+            <enum name="clockwise" value="0"/>
+            <enum name="anticlockwise" value="1"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="CircleImageView">
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_border_overlay" format="boolean" />
+        <attr name="civ_fill_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="BubbleSeekBar">
+        <attr name="bsb_min" format="integer|reference"/>
+        <attr name="bsb_max" format="integer|reference"/>
+        <attr name="bsb_progress" format="integer|reference"/>
+        <attr name="bsb_track_size" format="dimension|reference"/>
+        <attr name="bsb_second_track_size" format="dimension|reference"/>
+        <attr name="bsb_thumb_radius" format="dimension|reference"/>
+        <attr name="bsb_thumb_radius_on_dragging" format="dimension|reference"/>
+        <attr name="bsb_section_count" format="integer|reference"/>
+        <attr name="bsb_thumb_color" format="color|reference"/>
+        <attr name="bsb_track_color" format="color|reference"/>
+        <attr name="bsb_second_track_color" format="color|reference"/>
+        <attr name="bsb_show_text" format="boolean"/>
+        <attr name="bsb_text_size" format="dimension|reference"/>
+        <attr name="bsb_text_color" format="color|reference"/>
+        <attr name="bsb_text_position">
+            <enum name="sides" value="0"/>
+            <enum name="bottom" value="1"/>
+        </attr>
+        <attr name="bsb_show_thumb_text" format="boolean"/>
+        <attr name="bsb_thumb_text_size" format="dimension|reference"/>
+        <attr name="bsb_thumb_text_color" format="color|reference"/>
+        <attr name="bsb_bubble_color" format="color|reference"/>
+        <attr name="bsb_bubble_text_size" format="dimension|reference"/>
+        <attr name="bsb_bubble_text_color" format="color|reference"/>
+        <attr name="bsb_show_section_mark" format="boolean"/>
+        <attr name="bsb_auto_adjust_section_mark" format="boolean"/>
+        <attr name="bsb_show_progress_in_float" format="boolean"/>
+        <attr name="bsb_anim_duration" format="integer"/>
+        <attr name="bsb_touch_to_seek" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="VoronoiView">
+        <attr name="show_border" format="boolean" />
+        <attr name="border_color" format="color" />
+        <attr name="border_width" format="float" />
+        <attr name="border_round" format="boolean" />
+        <attr name="generation_type">
+            <enum name="random" value="1" />
+            <enum name="ordered" value="2" />
+            <enum name="custom" value="3" />
+        </attr>
+    </declare-styleable>
+
+</resources>

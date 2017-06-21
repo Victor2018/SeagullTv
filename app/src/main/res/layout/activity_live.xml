@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fl_play"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context="com.victor.seagull.LiveActivity">
+
+    <SurfaceView
+        android:id="@+id/sv_live"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"/>
+
+    <ImageView
+        android:id="@+id/iv_maintenance"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/program_maintenance"
+        android:visibility="gone"/>
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        layout="@layout/channel_list"
+        android:layout_gravity="bottom"/>
+    <include
+        layout="@layout/net_speed_tip"
+        android:layout_width="100dp"
+        android:layout_height="90dp"
+        android:layout_gravity="center"/>
+    <include
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="right"
+        layout="@layout/epg_tip"/>
+    <include
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        layout="@layout/gestrue_tip" />
+    <FrameLayout
+        android:id="@+id/fl_voice_bright"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:visibility="gone">
+        <ImageView
+            android:id="@+id/iv_voice_bright"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:src="@mipmap/ic_bright"/>
+        <com.victor.widget.CircleProgressBar
+            android:id="@+id/cpb_voice_bright"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            app:background_color="@color/alpha_blue"
+            app:background_width="8dp"
+            app:progress_color="@color/colorBluePrimary"
+            app:progress_width="8dp" />
+    </FrameLayout>
+
+</FrameLayout>

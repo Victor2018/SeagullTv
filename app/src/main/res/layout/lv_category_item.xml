@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	android:id="@+id/widget32"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="horizontal"
+	android:padding="10dp"
+	android:gravity="center"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<com.victor.widget.ColorMovingTextView
+		android:id="@+id/mtv_channel_name"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_marginLeft="10dp"
+		android:gravity="center_vertical"
+		android:textColor="@color/white"
+		android:textSize="16sp"
+		android:singleLine="true"
+		android:ellipsize="marquee"
+		android:marqueeRepeatLimit="marquee_forever"
+		android:text="CCTV-1HD" />
+
+</LinearLayout>

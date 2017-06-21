@@ -1,0 +1,1 @@
+package com.victor.seagull.view;import com.victor.model.data.GankData;/** * Created by victor on 2017/5/9. */public interface GankView {    void showLoading ();    void hideLoading ();    void showError (String error);    void setGankDatas (GankData data);}

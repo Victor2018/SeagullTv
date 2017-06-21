@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.victor.music.MusicActivity">
+    <item
+        android:id="@+id/action_share"
+        android:icon="@mipmap/ic_share"
+        android:orderInCategory="100"
+        android:title="@string/share"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_gank"
+        android:orderInCategory="100"
+        android:title="@string/gank"
+        app:showAsAction="never" />
+</menu>
