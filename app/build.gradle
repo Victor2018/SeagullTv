@@ -1,8 +1,12 @@
 apply plugin: 'com.android.application'
 
+def releaseTime() {
+    return new Date().format("yyyyMMddHHmm", TimeZone.getTimeZone("UTC"))
+}
+
 android {
     compileSdkVersion 24
-    buildToolsVersion '25.0.0'
+    buildToolsVersion '24.0.2'
 
     signingConfigs {
         release {
@@ -10,6 +14,7 @@ android {
             storePassword "android"
             keyAlias "victor"
             keyPassword "android"
+            v2SigningEnabled false  //禁用v2签名方式
         }
     }
 
@@ -17,8 +22,8 @@ android {
         applicationId "com.victor.seagull"
         minSdkVersion 17
         targetSdkVersion 24
-        versionCode 19
-        versionName "1.1.9"
+        versionCode 20
+        versionName "1.2.0"
 
         ndk {
             moduleName "ImageBlur"
@@ -35,6 +40,57 @@ android {
         debug {
             signingConfig signingConfigs.release
         }
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+
+    //移除lint检测的error
+    lintOptions {
+        abortOnError false
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+        overseas {
+            res.srcDirs = ["overseas/res"]
+        }
+    }
+
+    productFlavors {
+        main {
+            // 每个环境包名不同
+            applicationId "com.victor.seagull"
+            // 动态修改 常量 字段
+            buildConfigField "String", "AUTHORITY", '"content.video.content"'
+            manifestPlaceholders = [UPDATE_URL_KEY: "https://raw.githubusercontent.com/Victor2018/SeagullTv/master/docs/update_json.txt",
+                                    AUTHORITIES:"content.video.content"]
+        }
+        overseas {
+            // 每个环境包名不同
+            applicationId "com.victor.overseas.seagull"
+            // 动态修改 常量 字段
+            buildConfigField "String", "AUTHORITY", '"content.overseas.video.content"'
+            manifestPlaceholders = [UPDATE_URL_KEY: "https://raw.githubusercontent.com/Victor2018/SeagullTv/master/docs/update_json.txt",
+            AUTHORITIES:"content.overseas.video.content"]
+        }
+    }
+
+    // 自定义输出配置，这里我们加上APK版本号1.0
+    applicationVariants.all { variant -> variant.outputs.each { output -> def outputFile = output.outputFile
+        if (outputFile != null && outputFile.name.endsWith('.apk')) {
+            String typeName = variant.buildType.name;
+            //只处理Rlease版本
+            if ("release".equals(typeName)) {
+                // 输出apk名称为SeagullTv_v1.0_main.apk
+                def fileName = "SeagullTv_v${defaultConfig.versionName}_${releaseTime()}_${variant.productFlavors[0].name}.apk"
+                output.outputFile = new File(outputFile.parent, fileName)
+            }
+        }
+    }
     }
 }
 

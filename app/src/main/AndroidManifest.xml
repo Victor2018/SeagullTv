@@ -19,7 +19,7 @@
         android:theme="@style/AppTheme">
         <meta-data
             android:name="UPDATE_URL_KEY"
-            android:value="https://raw.githubusercontent.com/Victor2018/SeagullTv/master/docs/update_json.txt" />
+            android:value="${UPDATE_URL_KEY}" />
 
         <activity
             android:name=".MainActivity"
@@ -62,7 +62,7 @@
 
         <provider
             android:name="com.victor.db.DataBaseContent"
-            android:authorities="content.video.content" />
+            android:authorities="${AUTHORITIES}" />
 
         <activity
             android:name=".GankActivity"
