@@ -1,7 +1,7 @@
 apply plugin: 'com.android.application'
 
 def releaseTime() {
-    return new Date().format("yyyyMMddHHmm", TimeZone.getTimeZone("UTC"))
+    return new Date().format("yyyyMMddHHmm", TimeZone.getTimeZone("GMT+08:00"))
 }
 
 android {
