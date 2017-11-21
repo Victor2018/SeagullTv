@@ -178,7 +178,7 @@ def buildLog(String output, String vName, String vCode, String buildVerCode, Str
     builder.append("\r\n")
     builder.append("[调试模式]=" + modelDebug)
     builder.append("\r\n")
-    builder.append("[上传至fir]=" + upLoadToFir)
+    builder.append("[上传标记]=" + upLoadToFir)
     fw.write(builder.toString())
     fw.flush();
     fw.close();
