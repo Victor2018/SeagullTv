@@ -40,6 +40,10 @@ def mFirApiToken = String.valueOf(mVersionProps['FIR_API_TOKEN'])
  * fir上传url地址
  */
 def mFirUploadUrl = String.valueOf(mVersionProps['FIR_UPLOAD_URL'])
+/**
+ * 是否上传到fir
+ */
+def mUpLoadToFir = String.valueOf(mVersionProps['UPLOAD_TO_FIR'])
 
 
 android {
@@ -156,7 +160,7 @@ def getProperty() {
  * 构建时间
  * 提交记录等
  */
-def buildLog(String output, String vName, String vCode, String buildVerCode, String modelOnline, String modelDebug,String firApiToken,String firUploadUrl) {
+def buildLog(String output, String vName, String vCode, String buildVerCode, String modelOnline, String modelDebug,String firApiToken,String firUploadUrl,String upLoadToFir) {
     File outputFile = new File(output)
     if (!outputFile.exists())
         outputFile.mkdirs()
@@ -173,10 +177,15 @@ def buildLog(String output, String vName, String vCode, String buildVerCode, Str
     builder.append("[线上环境]=" + modelOnline)
     builder.append("\r\n")
     builder.append("[调试模式]=" + modelDebug)
+    builder.append("\r\n")
+    builder.append("[上传至fir]=" + upLoadToFir)
     fw.write(builder.toString())
     fw.flush();
     fw.close();
-    uploadToFir(output,vName,buildVerCode,firApiToken,firUploadUrl);
+
+    if (Boolean.valueOf(upLoadToFir)) {
+        uploadToFir(output,vName,buildVerCode,firApiToken,firUploadUrl);
+    }
 }
 
 def uploadToFir (String output,String verName,String buildVerCode,String firApiToken,String firUploadUrl) {
@@ -212,7 +221,7 @@ def uploadToFir (String output,String verName,String buildVerCode,String firApiT
 
 build {
     doLast {
-        buildLog(mOutputDir, mVersionName, mVersionCode, mBuildCode, mModelOnline, mModelDebug,mFirApiToken,mFirUploadUrl)
+        buildLog(mOutputDir, mVersionName, mVersionCode, mBuildCode, mModelOnline, mModelDebug,mFirApiToken,mFirUploadUrl,mUpLoadToFir)
         copy {
             from "$buildDir/outputs/mapping"
             into mOutputDir
