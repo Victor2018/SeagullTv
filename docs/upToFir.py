@@ -8,14 +8,14 @@ def upToFir():
     # 打印传递过来的参数数组长度，便于校验
     print len(sys.argv)
     upUrl = sys.argv[1]
-    appName = sys.argv[2]
+    appName = sys.argv[2].decode("gbk").encode("utf-8")
     bundleId = sys.argv[3]
     verName = sys.argv[4]
     apiToken = sys.argv[5]
     iconPath = sys.argv[6]
     apkPath = sys.argv[7]
     buildNumber = sys.argv[8]
-    changeLog = sys.argv[9]
+    changeLog = sys.argv[9].decode("gbk").encode("utf-8")
     queryData = {'type': 'android', 'bundle_id': bundleId, 'api_token': apiToken}
     iconDict = {}
     binaryDict = {}
