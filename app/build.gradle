@@ -29,6 +29,10 @@ def String mModelDebug = String.valueOf(mVersionProps['MODEL_DEBUG']);
  */
 def String mBuildCode = String.valueOf(mVersionProps['BUILD_CODE']);
 /**
+ * 编译apk文件名称
+ */
+def String mBuildName = String.valueOf(mVersionProps['BUILD_NAME']);
+/**
  * 指定输出目录
  */
 def mOutputDir = "${rootDir}/outputs/build_" + releaseTime();
@@ -139,7 +143,7 @@ android {
                 if ("release".equals(typeName)) {
                     // 输出apk名称为SeagullTv_v1.0_2017_11_20_18:00_main.apk
 //                    def fileName = "SeagullTv_v${defaultConfig.versionName}_${releaseTime()}_${variant.productFlavors[0].name}.apk"
-                    def fileName = "SeagullTv_v${defaultConfig.versionName}_${variant.productFlavors[0].name}.apk"
+                    def fileName = "${mBuildName}_v${defaultConfig.versionName}_${variant.productFlavors[0].name}.apk"
 //                output.outputFile = new File(outputFile.parent, fileName)
                     output.outputFile = new File(mOutputDir, fileName)
                 }
@@ -164,7 +168,7 @@ def getProperty() {
  * 构建时间
  * 提交记录等
  */
-def buildLog(String output, String vName, String vCode, String buildVerCode, String modelOnline, String modelDebug,String firApiToken,String firUploadUrl,String upLoadToFir,String uploadChannel) {
+def buildLog(String output, String vName, String vCode, String buildVerCode,String buildName, String modelOnline, String modelDebug,String firApiToken,String firUploadUrl,String upLoadToFir,String uploadChannel) {
     File outputFile = new File(output)
     if (!outputFile.exists())
         outputFile.mkdirs()
@@ -190,11 +194,11 @@ def buildLog(String output, String vName, String vCode, String buildVerCode, Str
     fw.close();
 
     if (Boolean.valueOf(upLoadToFir)) {
-        uploadToFir(output,vName,buildVerCode,firApiToken,firUploadUrl,uploadChannel);
+        uploadToFir(output,vName,buildVerCode,buildName,firApiToken,firUploadUrl,uploadChannel);
     }
 }
 
-def uploadToFir (String output,String verName,String buildVerCode,String firApiToken,String firUploadUrl,String uploadChannel) {
+def uploadToFir (String output,String verName,String buildVerCode,String buildName,String firApiToken,String firUploadUrl,String uploadChannel) {
     println(output)
     def appName = "海鸥TV"
     def bundleId = project.android.defaultConfig.applicationId
@@ -202,7 +206,7 @@ def uploadToFir (String output,String verName,String buildVerCode,String firApiT
     if (!uploadChannel.equals("main")) {
         iconPath = "$rootDir/app/${uploadChannel}/res/mipmap-xxhdpi/logo.png"
     }
-    def fileName = "SeagullTv_v${verName}_${uploadChannel}.apk"
+    def fileName = "${buildName}_v${verName}_${uploadChannel}.apk"
     def apkPath = "${output}/${fileName}"
     def changeLog = "1,添加自动上传fir功能;2,修复自动上传fir更新日志乱码问题;3,添加上传渠道配置"
 
@@ -232,7 +236,7 @@ def uploadToFir (String output,String verName,String buildVerCode,String firApiT
 
 build {
     doLast {
-        buildLog(mOutputDir, mVersionName, mVersionCode, mBuildCode, mModelOnline, mModelDebug,mFirApiToken,mFirUploadUrl,mUpLoadToFir,mUpLoadChannel)
+        buildLog(mOutputDir, mVersionName, mVersionCode, mBuildCode,mBuildName, mModelOnline, mModelDebug,mFirApiToken,mFirUploadUrl,mUpLoadToFir,mUpLoadChannel)
         copy {
             from "$buildDir/outputs/mapping"
             into mOutputDir
