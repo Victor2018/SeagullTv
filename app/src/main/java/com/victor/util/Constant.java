@@ -40,7 +40,7 @@ public class Constant {
     public static final String CHANNEL_URL                           = "https://raw.githubusercontent.com/Victor2018/SeagullTv/master/docs/channels_json.txt";
     public static final String CHANNEL_URL_NEW                       = "https://raw.githubusercontent.com/Victor2018/SeagullTv/master/docs/channels.json";
     public static final String DEFAULT_PLAY_URL                      = "http://222.191.24.5:6610/2/2/ch00000090990000001251/index.m3u8?ispcode=3";
-    public static final String DEFAULT_EPG_URL                       = "http://www.tvsou.com/epg/hubeidianshitai-hbws?class=weishi";
+    public static final String DEFAULT_EPG_URL                       = "http://ivi.bupt.edu.cn/hls/hbhd.m3u8";
     public static final String CATEGORY_URL                          = "https://raw.githubusercontent.com/Victor2018/SeagullTv/master/docs/category_json.txt";
     public static final String CATEGORY_URL_NEW                      = "https://raw.githubusercontent.com/Victor2018/SeagullTv/master/docs/category.json";
     public static final String GANK_BASE_URL                          = "http://gank.io/api/data/" + URLEncoder.encode("福利");
