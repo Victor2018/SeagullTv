@@ -1045,38 +1045,6 @@
 		    }
 		]
 	    },
-		{"channel_category":"卡通动画","channels":
-		[
-			{"channel_name":"炫动卡通HD","play_urls":
-			[
-				{"play_url":"http://222.191.24.5:6610/2/2/ch00000090990000001151/index.m3u8?ispcode=3"}
-			],
-				"epg":"",
-				"icon":""
-			},
-			{"channel_name":"嘉佳卡通HD","play_urls":
-			[
-				{"play_url":"http://222.191.24.5:6610/2/2/ch00000090990000001235/index.m3u8?ispcode=3"}
-			],
-				"epg":"",
-				"icon":""
-			},
-			{"channel_name":"卡通HD","play_urls":
-			[
-				{"play_url":"http://222.191.24.5:6610/2/2/ch00000090990000001188/index.m3u8?ispcode=3"}
-			],
-				"epg":"",
-				"icon":""
-			},
-			{"channel_name":"BTV卡通HD","play_urls":
-			[
-				{"play_url":"http://222.191.24.5:6610/2/2/ch00000090990000001148/index.m3u8?ispcode=3"}
-			],
-				"epg":"",
-				"icon":""
-			}
-		]
-		},
 		{"channel_category":"电视剧频道","channels":
 		[
 			{"channel_name":"火猫5剧场","play_urls":
