@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<set xmlns:android="http://schemas.android.com/apk/res/android">
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="500">
   <!--  <scale
           android:fromXScale="1.2"
           android:toXScale="1.0"
@@ -9,12 +10,18 @@
           android:pivotY="50%"
           android:fillAfter="true"
           android:duration="500" /> -->
-    <translate
+<!--    <translate
        android:fromXDelta="0"
        android:toXDelta="0"
        android:fromYDelta="240"
        android:toYDelta="0"
-       android:duration="500"/>
+       android:duration="500"/>-->
+
+  <translate
+      android:fromYDelta="100%"
+      android:toYDelta="0"></translate>
+
+  <alpha
+      android:fromAlpha="0"
+      android:toAlpha="1"></alpha>
 </set>
-
-

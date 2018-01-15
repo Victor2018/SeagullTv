@@ -272,6 +272,6 @@ dependencies {
         transitive = true
     }
     compile files('libs/jsoup-1.9.2.jar')
-    compile 'com.github.Victor2018:AppUpdateLib:v1.7'
+    compile 'com.github.Victor2018:AppUpdateLib:v1.9'
     compile 'com.github.Victor2018:PermissionHelper:v1.0'
 }
