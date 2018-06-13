@@ -16,9 +16,9 @@
 	    },
 	    {
 		"action":"29",
-		"title":"搞笑",
+		"title":"推荐视频",
 		"img":"https://github.com/Victor2018/SeagullTv/raw/master/SrceenShot/ic_funny.png",
-		"url":"https://newapi.meipai.com/channels/feed_timeline.json?id=13&type=2&count=%s&page=%s"
+		"url":"https://raw.githubusercontent.com/Victor2018/SeagullTv/master/docs/youtube_recommend.json"
 	    },
 	    {
 		"action":"3",

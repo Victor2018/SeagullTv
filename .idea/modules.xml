@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/SeagullTv.iml" filepath="$PROJECT_DIR$/SeagullTv.iml" />
-      <module fileurl="file://E:\Victor\github\SeagullTv\SeagullTv-master.iml" filepath="E:\Victor\github\SeagullTv\SeagullTv-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SeagullTv-master.iml" filepath="$PROJECT_DIR$/SeagullTv-master.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

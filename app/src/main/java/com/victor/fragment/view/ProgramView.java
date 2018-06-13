@@ -1,1 +1,1 @@
-package com.victor.fragment.view;import com.victor.model.data.ProgramData;/** * Created by victor on 2017/4/26. */public interface ProgramView {    void showLoading();    void hideLoading();    void showError(String error);    void setDatas(ProgramData datas);}
+package com.victor.fragment.view;import com.victor.model.data.ProgramData;/** * Created by victor on 2017/4/26. */public interface ProgramView <T> {    void OnProgram(T data, String msg);}

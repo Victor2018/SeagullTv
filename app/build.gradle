@@ -260,8 +260,8 @@ dependencies {
     compile 'com.mikepenz:fontawesome-typeface:4.5.0.1@aar'
     compile 'com.mikepenz:foundation-icons-typeface:3.0.0.1@aar'
 
-    compile 'com.mcxiaoke.volley:library:1.0.19'
-    compile 'com.squareup.okhttp3:okhttp:3.1.2'
+//    compile 'com.mcxiaoke.volley:library:1.0.19'
+//    compile 'com.squareup.okhttp3:okhttp:3.1.2'
     compile 'com.google.code.gson:gson:2.6.1'
     compile 'com.alibaba:fastjson:1.1.56.android'
 
@@ -274,4 +274,6 @@ dependencies {
     compile files('libs/jsoup-1.9.2.jar')
     compile 'com.github.Victor2018:AppUpdateLib:v1.9'
     compile 'com.github.Victor2018:PermissionHelper:v1.0'
+    compile 'com.github.Victor2018:SeagullPlayer:v1.5'
+    compile 'com.github.Victor2018:HttpLib:v2.7'
 }

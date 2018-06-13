@@ -1,40 +1,49 @@
 package com.victor.presenter.impl;
 
-import com.victor.model.GankModel;
+import com.android.volley.Request;
+import com.victor.http.annotation.HttpParms;
+import com.victor.http.inject.HttpInject;
+import com.victor.http.module.VolleyRequest;
+import com.victor.http.presenter.impl.BasePresenterImpl;
 import com.victor.model.data.GankData;
-import com.victor.model.impl.GankModelImpl;
-import com.victor.presenter.GankPresenter;
-import com.victor.presenter.OnGankListener;
 import com.victor.seagull.view.GankView;
 
 /**
  * Created by victor on 2017/5/9.
  */
-public class GankPresenterImpl implements GankPresenter,OnGankListener {
+public class GankPresenterImpl <H,T> extends BasePresenterImpl<H,T> {
     /*Presenter作为中间层，持有View和Model的引用*/
     private GankView gankView;
-    private GankModel gankModel;
 
     public GankPresenterImpl (GankView gankView) {
         this.gankView = gankView;
-        gankModel = new GankModelImpl();
     }
 
     @Override
-    public void getGankDatas(int currentPage) {
-        gankView.showLoading();
-        gankModel.loadGank(currentPage,this);
-    }
-
-    @Override
-    public void onSuccess(GankData data) {
-        gankView.hideLoading();
-        gankView.setGankDatas(data);
+    public void onSuccess(T data) {
+        if (gankView == null) return;
+        if (data == null) {
+            gankView.OnGank(null,"no data response");
+        } else {
+            gankView.OnGank(data,"");
+        }
     }
 
     @Override
     public void onError(String error) {
-        gankView.hideLoading();
-        gankView.showError(error);
+        if (gankView == null) return;
+        gankView.OnGank(null,error);
+    }
+
+    @Override
+    public void detachView() {
+        gankView = null;
+    }
+
+    @HttpParms(method = Request.Method.GET,bodyContentType = VolleyRequest.mJsonBodyContentType,responseCls = GankData.class)
+    @Override
+    public void sendRequest(String url,H header,T parm) {
+        HttpInject.inject(this);
+        super.sendRequest(url,header,parm);
     }
 }

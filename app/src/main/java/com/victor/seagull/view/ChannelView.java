@@ -1,1 +1,1 @@
-package com.victor.seagull.view;import com.victor.model.data.ChannelData;import com.victor.model.data.ProgramData;/** * Created by victor on 2017/4/26. */public interface ChannelView {    void showLoading();    void hideLoading();    void showError(String error);    void setDatas(ChannelData datas);}
+package com.victor.seagull.view;import com.victor.model.data.ChannelData;import com.victor.model.data.ProgramData;/** * Created by victor on 2017/4/26. */public interface ChannelView <T> {    void OnChannel(T data, String msg);}
