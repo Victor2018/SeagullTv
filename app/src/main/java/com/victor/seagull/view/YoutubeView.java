@@ -1,0 +1,1 @@
+package com.victor.seagull.view;/** * Created by victor on 2017/4/26. */public interface YoutubeView<T> {    void OnYoutube(T data, String msg);}

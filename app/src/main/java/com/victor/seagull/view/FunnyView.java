@@ -1,7 +1,5 @@
 package com.victor.seagull.view;
 
-import com.victor.model.data.FunnyData;
-
 /**
  * Created by victor on 2017/4/19.
  */

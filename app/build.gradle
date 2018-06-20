@@ -79,6 +79,15 @@ android {
         buildConfigField "boolean", "MODEL_DEBUG", mModelDebug
         buildConfigField "int", "BUILD_CODE", mBuildCode
 
+        renderscriptTargetApi 26
+        renderscriptSupportModeEnabled true
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath true
+            }
+        }
+
         ndk {
             moduleName "ImageBlur"
             ldLibs "m", "log", "jnigraphics"

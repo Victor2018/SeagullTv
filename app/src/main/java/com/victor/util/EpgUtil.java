@@ -1,7 +1,7 @@
 package com.victor.util;
 
-import com.victor.model.data.EpgData;
-import com.victor.model.data.EpgInfo;
+import com.victor.data.EpgData;
+import com.victor.data.EpgInfo;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;

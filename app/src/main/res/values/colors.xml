@@ -20,6 +20,11 @@
     <color name="ab_text_color">#555555</color>
     <color name="half_alpha">#4c000000</color>
 
+    <color name="color_E6FCFC">#E6FCFC</color>
+    <color name="color_E6FBFD">#E6FBFD</color>
+    <color name="color_E5FAFE">#E5FAFE</color>
+    <color name="color_E5F9FE">#E5F9FE</color>
+
     <array name="colors">
         <item>@color/colorBluePrimary</item>
         <item>@color/colorRedPrimary</item>
