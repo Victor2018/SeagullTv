@@ -10,27 +10,27 @@
 	    },
 	    {
 		"action":"2",
-		"title":"热门",
+		"title":"Youtube热门",
 		"img":"https://github.com/Victor2018/SeagullTv/raw/master/SrceenShot/ic_hot.png",
-		"url":"https://newapi.meipai.com/hot/feed_timeline.json?count=%s&page=%s"
+		"url":"https://www.youtube.com/channel/UCF0pVplsI8R5kcAqgtoRqoA"
 	    },
 	    {
 		"action":"29",
-		"title":"推荐视频",
+		"title":"Youtube音乐",
 		"img":"https://github.com/Victor2018/SeagullTv/raw/master/SrceenShot/ic_funny.png",
-		"url":"https://raw.githubusercontent.com/Victor2018/SeagullTv/master/docs/youtube_recommend.json"
+		"url":"https://www.youtube.com/channel/UC-9-kyTW8ZkZNDHQJ6FgpwQ"
 	    },
 	    {
 		"action":"3",
-		"title":"美食",
+		"title":"Youtube体育",
 		"img":"https://github.com/Victor2018/SeagullTv/raw/master/SrceenShot/ic_delicious_food.png",
-		"url":"https://newapi.meipai.com/channels/feed_timeline.json?id=59&type=2&count=%s&page=%s"
+		"url":"https://www.youtube.com/channel/UCEgdi0XIXXZ-qJOFPf4JSKw"
 	    },
 	    {
 		"action":"4",
-		"title":"吃秀",
+		"title":"Youtube游戏",
 		"img":"https://github.com/Victor2018/SeagullTv/raw/master/SrceenShot/ic_eat_show.png",
-		"url":"https://newapi.meipai.com/channels/feed_timeline.json?id=423&type=2&count=%s&page=%s"
+		"url":"https://www.youtube.com/channel/UCOpNcN46UbXVtpKMrmU4Abg"
 	    },
 	    {
 		"action":"5",

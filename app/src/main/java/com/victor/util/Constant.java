@@ -45,6 +45,7 @@ public class Constant {
     public static final String CATEGORY_URL_NEW                      = "https://raw.githubusercontent.com/Victor2018/SeagullTv/master/docs/category.json";
     public static final String GANK_BASE_URL                          = "http://gank.io/api/data/" + URLEncoder.encode("福利");
     public static final String GANK_URL                               = "/%s/%s";
+    public static final String YOUTUBE_IMG_URL                       = "https://i.ytimg.com/vi/%s/hqdefault.jpg?sqp=-oaymwEWCMQBEG5IWvKriqkDCQgBFQAAiEIYAQ==&rs=AOn4CLBTZi8JCWrkzvXrj3TsxNGrbkmzpw";
     public static final int PAGE_SIZE                                = 30;
     public static final String dir = FileUtil.getDiskCacheDir(App.getContext()) + "/girls";
     public static class Msg {
@@ -79,6 +80,7 @@ public class Constant {
         public static final int SAVE_PICTURE_SUCCESS                        = 0x130;
         public static final int SET_WALLPAPER_SUCCESS                       = 0x131;
         public static final int SET_WALLPAPER_FAILED                        = 0x132;
+        public static final int REQUEST_YOUTUBE                              = 0x133;
     }
 
     public static class Action {
@@ -92,6 +94,7 @@ public class Constant {
         public static final int SHARE_PICTURE                                 = 0x208;
         public static final int SAVE_PICTURE                                  = 0x209;
         public static final int SET_WALLPAPER                                 = 0x210;
+        public static final int YOUTUBE_VIDEO                                 = 0x211;
         public static final int LIVE                                        = 1;
         public static final int HOT                                         = 2;
         public static final int FUNNY                                       = 29;

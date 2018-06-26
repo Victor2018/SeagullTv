@@ -47,9 +47,9 @@ public class YoutubeAdapter extends BaseRecycleAdapter<YoutubeInfo,RecyclerView.
             }
         }
         contentViewHolder.mCtvTitle.setText(data.videoName);
-        String imgUrl = "http://ww1.sinaimg.cn/large/0065oQSqly1frsllc19gfj30k80tfah5.jpg";
+//        String imgUrl = "http://ww1.sinaimg.cn/large/0065oQSqly1frsllc19gfj30k80tfah5.jpg";
         Glide.with(mContext)
-                .load(imgUrl)
+                .load(data.poster)
                 .thumbnail(0.2f)
                 .into(contentViewHolder.mIvImg);
 //        ImageUtils.get().loadImage(contentViewHolder.mIvImg,imgUrl,R.mipmap.default_img);
