@@ -81,6 +81,7 @@ public class Constant {
         public static final int SET_WALLPAPER_SUCCESS                       = 0x131;
         public static final int SET_WALLPAPER_FAILED                        = 0x132;
         public static final int REQUEST_YOUTUBE                              = 0x133;
+        public static final int REQUEST_VIMEO                                = 0x134;
     }
 
     public static class Action {

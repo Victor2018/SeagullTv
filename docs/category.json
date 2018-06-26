@@ -34,45 +34,45 @@
 	    },
 	    {
 		"action":"5",
-		"title":"音乐",
+		"title":"Travel",
 		"img":"https://github.com/Victor2018/SeagullTv/raw/master/SrceenShot/ic_music.png",
-		"url":"https://newapi.meipai.com/channels/feed_timeline.json?id=62&type=2&count=%s&page=%s"
+		"url":"https://vimeo.com/categories/travel"
 	    },
 	    {
 		"action":"6",
-		"title":"舞蹈",
+		"title":"Music",
 		"img":"https://github.com/Victor2018/SeagullTv/raw/master/SrceenShot/ic_dance.png",
-		"url":"https://newapi.meipai.com/channels/feed_timeline.json?id=63&type=2&count=%s&page=%s"
+		"url":"https://vimeo.com/categories/music"
 	    },
 	    {
 		"action":"7",
-		"title":"明星名人",
+		"title":"Journalism",
 		"img":"https://github.com/Victor2018/SeagullTv/raw/master/SrceenShot/ic_star.png",
-		"url":"https://newapi.meipai.com/channels/feed_timeline.json?id=16&type=2&count=%s&page=%s"
+		"url":"https://vimeo.com/categories/journalism"
 	    },
 	    {
 		"action":"8",
-		"title":"女神",
+		"title":"Sports",
 		"img":"https://github.com/Victor2018/SeagullTv/raw/master/SrceenShot/ic_goddess.png",
-		"url":"https://newapi.meipai.com/channels/feed_timeline.json?id=19&type=2&count=%s&page=%s"
+		"url":"https://vimeo.com/categories/sports"
 	    },
 	    {
 		"action":"9",
-		"title":"宠物",
+		"title":"Talks",
 		"img":"https://github.com/Victor2018/SeagullTv/raw/master/SrceenShot/ic_pet.png",
-		"url":"https://newapi.meipai.com/channels/feed_timeline.json?id=6&type=2&count=%s&page=%s"
+		"url":"https://vimeo.com/categories/talks"
 	    },
 	    {
 		"action":"10",
-		"title":"手工",
+		"title":"Documentary",
 		"img":"https://github.com/Victor2018/SeagullTv/raw/master/SrceenShot/ic_manual.png",
-		"url":"https://newapi.meipai.com/channels/feed_timeline.json?id=450&type=2&count=%s&page=%s"
+		"url":"https://vimeo.com/categories/documentary"
 	    },
 	    {
 		"action":"11",
-		"title":"穿秀",
+		"title":"Instructionals",
 		"img":"https://github.com/Victor2018/SeagullTv/raw/master/SrceenShot/ic_wear_show.png",
-		"url":"https://newapi.meipai.com/channels/feed_timeline.json?id=460&type=2&count=%s&page=%s"
+		"url":"https://vimeo.com/categories/instructionals"
 	    },
 	    {
 		"action":"12",
