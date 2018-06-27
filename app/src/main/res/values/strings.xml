@@ -41,7 +41,7 @@
     <string name="set_wallpaper_failed">设为壁纸失败！</string>
     <string name="save_picture_success">图片保存成功！</string>
     <string name="share_beauty">给你分享一个美女：</string>
-    <string name="share_meipai">给你分享一个美拍视频：</string>
+    <string name="share_meipai">给你分享一个短视频：</string>
     <string name="share_funny">给你分享一个搞笑段子：</string>
     <string name="thanks_your_support">感谢您的支持！</string>
     <string name="share_app">给你分享一个开源视频应用：https://github.com/Victor2018/SeagullTv/raw/master/app/SeagullTv.apk</string>

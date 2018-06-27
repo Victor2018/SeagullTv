@@ -40,13 +40,17 @@ public class YoutubeAdapter extends BaseRecycleAdapter<YoutubeInfo,RecyclerView.
     @Override
     public void onBindContentVHolder(RecyclerView.ViewHolder viewHolder, YoutubeInfo data, int position) {
         YoutubeContentViewHolder contentViewHolder = (YoutubeContentViewHolder) viewHolder;
-        String name = data.videoName;
-        if (!TextUtils.isEmpty(name)) {
-            if (name.length() > 20) {
-                name = name.substring(0,20) + "...";
+        String title = data.videoName;
+        if (TextUtils.isEmpty(title)) {
+            title = data.url;
+        }
+        if (!TextUtils.isEmpty(title)) {
+            if (title.length() > 20) {
+                title = title.substring(0,20) + "...";
             }
         }
-        contentViewHolder.mCtvTitle.setText(data.videoName);
+        contentViewHolder.mCtvTitle.setText(title);
+
 //        String imgUrl = "http://ww1.sinaimg.cn/large/0065oQSqly1frsllc19gfj30k80tfah5.jpg";
         Glide.with(mContext)
                 .load(data.poster)

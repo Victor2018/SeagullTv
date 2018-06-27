@@ -280,9 +280,8 @@ dependencies {
     compile('com.afollestad.material-dialogs:commons:0.9.0.1') {
         transitive = true
     }
-    compile files('libs/jsoup-1.9.2.jar')
     compile 'com.github.Victor2018:AppUpdateLib:v1.9'
     compile 'com.github.Victor2018:PermissionHelper:v1.0'
-    compile 'com.github.Victor2018:SeagullPlayer:v1.5'
+    compile 'com.github.Victor2018:SeagullPlayer:v1.7'
     compile 'com.github.Victor2018:HttpLib:v2.7'
 }

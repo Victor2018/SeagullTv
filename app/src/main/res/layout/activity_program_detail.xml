@@ -37,7 +37,6 @@
             android:fitsSystemWindows="true"
             app:layout_collapseMode="parallax"
             android:scaleType="centerCrop"
-            android:visibility="gone"
             android:background="@mipmap/img_header"
             android:transitionName="@string/transition_album_img"/>
         <android.support.v7.widget.Toolbar
